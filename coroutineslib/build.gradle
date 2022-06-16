@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+
+//    For using viewModelScope
+//    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    //For runBlockingTest, CoroutineDispatcher etc.
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
+    //For InstantTaskExecutorRule
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    testImplementation 'junit:junit:4.13.2'
+}
